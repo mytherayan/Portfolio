@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytherayan</title>
+    <style>
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("https://img.freepik.com/free-photo/3d-rendering-hexagonal-texture-background_23-2150796416.jpg");
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.shape {
+    width: 900px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg);
+    border-radius: 5px; /* Rounded corners */
+    backdrop-filter: blur(12px); /* Blur the background */
+}
+.black-text {
+    color: black; /* Black text color */
+}
+.white-text {
+    color: black; /* Black text color */
+}
+.yellow-text {
+    color: black; /* Black text color */
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="shape"> <h2>About Me</h2>
+            <p class="yellow-text" >I'm Mytherayan, a talented developer from Tamil Nadu, India. I have a proven track record of crafting visually captivating and user-friendly designs that simplify complex challenges.</p>
+            <p class="black-text" >A self-driven individual with excellent communication, research and problem-solving capabilities. Always striving to perform to the best of my abilities and committed to learning new skills. A hardworking and reliable team player with a passion for producing results.</p>
+            <h2 class="black-text">What I'm Doing</h2></div>
+    </div>
+    <script >
+	const shape = document.querySelector('.shape');
+
+document.addEventListener('mousemove', (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 30;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 30;
+    shape.style.transform = `translate(-50%, -50%) rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
+});
+
+</script>
+</body>
+</html>
